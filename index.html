@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .preview {
+      margin: 0 2rem;
+    }
+  </style>
+  <title>PrivateYT UI Demo</title>
+</head>
+<body>
+  <header>
+    <div class="dropdown-container">
+      <button type="button" class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Theme</button>
+      <ul class="dropdown-menu" role="menu">
+        <li><button type="button" role="menuitem" id="light-mode-btn">Light</button></li>
+        <li><button type="button" role="menuitem" id="dark-mode-btn">Dark</button></li>
+        <li><button type="button" role="menuitem" id="oled-dark-btn">OLED Dark</button></li>
+        <li><button type="button" role="menuitem" id="system-theme-btn">System</button></li>
+      </ul>
+    </div>
+  </header>
+  <main class="width-fixed medium">
+    <h1>PrivateYT UI Demo</h1>
+    <p>This is a demonstration of what my UI will look like.</p>
+    <section id="headings">
+      <h2>Headings</h2>
+      <p>Defines structure. Only headings 1 and 2 have bottom borders.</p>
+      <div class="preview">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      </div>
+    </section>
+    <!-- texts -->
+    <section id="paragraphs-and-other-texts">
+      <h2>Paragraphs and Other Texts</h2>
+      <h3>Paragraphs</h3>
+      <div class="preview">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quae vel illo eius porro quo sint, nesciunt atque error tempora laboriosam adipisci quis facilis, alias excepturi voluptatum? Facere, est amet!</p>
+      </div>
+      <h3>Inline Code Blocks</h3>
+      <div class="preview">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code>console.log()</code> recusandae suscipit porro voluptatum.</p>
+      </div>
+      <h3>Preformatted Text</h3>
+      <p>Used to display a code block.</p>
+      <div class="preview">
+        <pre><code>function foo(a, b) {
+  if (!b) {
+    return null;
+  }
+  const bar = (a / b) * 2;
+  return bar;
+}</code></pre>
+      </div>
+    </section>
+    <section id="links">
+      <h2>Links</h2>
+      <p>Text that redirects to another page.</p>
+      <div class="preview">
+        <p>Nulla quia aspernatur <a href="#">dolores</a> minima!</p>
+      </div>
+    </section>
+    <section id="interactive-elements">
+      <h2>Interactive Elements</h2>
+      <p>Elements that can be interacted with, such as buttons, inputs, textareas, or dropdowns.</p>
+      <h3>Buttons</h3>
+      <div class="preview">
+        <button type="button">Example Button</button>
+        <button type="button" disabled>Disabled Button</button>
+        <button type="button" class="btn-primary">Example Button</button>
+      </div>
+      <h3>Selects</h3>
+      <p>A simple HTML dropdown. Has limited styling compared to dropdowns.</p>
+      <div class="preview">
+        <select name="example-select" id="example-select">
+          <option value="example-select">Example Select</option>
+          <option value="1">Value 1</option>
+          <option value="2">Value 2</option>
+        </select>
+        <select name="" id="" disabled>
+          <option value="">Disabled Select</option>
+        </select>
+      </div>
+      <h3>Dropdowns</h3>
+      <p>Similar to <code>select</code>, but more customizable.</p>
+      <div class="preview">
+        <div class="dropdown-container">
+          <button type="button" class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Example Dropdown</button>
+          <ul class="dropdown-menu" role="menu">
+            <li><button type="button">Value 1</button></li>
+            <li><button type="button">Value 2</button></li>
+          </ul>
+        </div>
+      </div>
+      <h3>Textareas</h3>
+      <div class="preview">
+        <span>Non-resizable:</span>
+        <textarea class="no-resize" name="example-textarea" id="example-textarea"></textarea>
+        <span>Resizable:</span>
+        <textarea name="example-textarea-resizable" id="example-textarea-resizable"></textarea>
+      </div>
+      <h3>Text Input</h3>
+      <div class="preview">
+        <input type="text">
+      </div>
+      <h3>Checkbox Input</h3>
+      <div class="preview">
+        <input type="checkbox" class="checkbox">
+      </div>
+      <h3>Color Input</h3>
+      <div class="preview">
+        <input type="color" class="color-picker">
+      </div>
+      <h3>Radio Input</h3>
+      <div class="preview">
+        <input type="radio" class="radio">
+      </div>
+      <h3>Range/Slider Input</h3>
+      <div class="preview">
+        <input type="range" class="range">
+      </div>
+      <h3>Search Input</h3>
+      <div class="preview">
+        <input type="search" class="search">
+      </div>
+    </section>
+    <section>
+      <h2>Other Elements</h2>
+      <h3>Details and Summary</h3>
+      <div class="preview">
+        <details>
+          <summary>Example Details and Summary</summary>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nihil quod! Laudantium praesentium exercitationem sit maiores ab vel eius quae nobis soluta nihil hic, omnis harum deleniti quaerat autem perferendis.</p>
+        </details>
+      </div>
+      <h3>Dialogs</h3>
+      <p>Click these buttons to open different dialog styles</p>
+      <button type="button" class="showModal" data-dialog="modallike">Dialog modal</button>
+      <button type="button" class="showModal" data-dialog="windowlike">Window-like dialog</button>
+      <h3>Custom Context Menu</h3>
+      <p>Right click on this box to show the context menu</p>
+      <div id="custom-context-menu-trigger" style="background-color: var(--bg-color-primary); height: 8rem; border-radius: 0.5rem; border: var(--borders);"></div>
+    </section>
+  </main>
+  <dialog id="modallike">
+    <div class="dialog-content">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus facilis similique, aut alias numquam vel?</p>
+      <button type="button" class="closeModal">Close</button>
+    </div>
+  </dialog>
+  <dialog id="windowlike" class="windowlike">
+    <div class="dialog-header">
+      <h2>hi</h2>
+      <button type="button" class="closeModal close-x"></button>
+    </div>
+    <div class="dialog-content">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam commodi in, sit eveniet natus asperiores!</p>
+    </div>
+  </dialog>
+  <footer>
+    <span>Footer content</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
