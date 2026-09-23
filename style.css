@@ -330,6 +330,7 @@ summary:active {
   display: inline-block;
 }
 .tooltip-text {
+  z-index: 50;
   pointer-events: none;
   visibility: hidden;
   width: max-content;
