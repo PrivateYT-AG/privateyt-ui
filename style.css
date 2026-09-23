@@ -135,7 +135,7 @@ header .link-button {
   width: calc(100% - 4rem);
   background-color: var(--bg-color-secondary);
   border: var(--borders);
-  border-radius: 1.5rem;
+  border-radius: 24px;
 }
 .wide {
   max-width: 1200px;
@@ -224,7 +224,7 @@ details {
   width: 100%;
   background-color: var(--bg-color-primary);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   overflow: hidden;
   height: 2.5rem;
 }
@@ -282,7 +282,7 @@ summary:active {
   position: absolute;
   top: 100%;
   left: 0;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: var(--bg-color-secondary);
   border: var(--borders);
   list-style: none;
@@ -330,26 +330,31 @@ summary:active {
   display: inline-block;
 }
 .tooltip-text {
-  font-size: 0.875rem;
-  font-weight: 400;
-  width: 6rem;
+  pointer-events: none;
   visibility: hidden;
-  background-color: var(--bg-color-primary);
-  color: var(--text-color);
+  width: max-content;
+  height: max-content;
+  min-width: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
   border: var(--borders);
   text-align: center;
-  padding: 0.25rem;
-  border-radius: 6px;
+  color: #e6e6e6;
+  background-color: #000c;
   position: absolute;
-  z-index: 20;
-  bottom: -100%;
-  left: -70%;
-  opacity: 0;
-  transition: opacity 0.2s;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease, visibility 0.3s ease;
+}
+.tooltip-text.bottom {
+  transform-origin: top;
+  top: 100%;
 }
 .tooltip:hover .tooltip-text {
   visibility: visible;
-  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }
 button {
   font: inherit;
@@ -359,7 +364,7 @@ button {
   color: var(--text-color);
   background-color: var(--bg-color-teritary);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease-out, border 0.2s ease-out;
 }
@@ -391,7 +396,7 @@ select {
   color: var(--text-color);
   background-color: var(--bg-color-teritary);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease-out, transform 0.15s ease;
 }
@@ -411,7 +416,7 @@ input {
   line-height: inherit;
   color: var(--text-color);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: var(--bg-color-primary);
   padding: 0.5rem;
 }
@@ -459,7 +464,7 @@ textarea {
   line-height: inherit;
   color: var(--text-color);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: var(--bg-color-primary);
   padding: 0.5rem;
   resize: vertical;
@@ -501,7 +506,7 @@ pre {
   white-space: pre-wrap;
   background-color: var(--bg-color-primary);
   border: var(--borders);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   padding: 1rem;
 }
 dialog {
@@ -510,7 +515,7 @@ dialog {
   background-color: var(--bg-color-primary);
   border: var(--borders);
   padding: 0;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   box-shadow: var(--shadows-2);
 }
 dialog[open] {
@@ -575,7 +580,7 @@ dialog.windowlike {
 }
 .card {
   padding: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 24px;
   background-color: var(--bg-color-secondary);
   border: var(--borders);
 }
@@ -586,7 +591,7 @@ dialog.windowlike {
   color: var(--text-color) !important;
   border: var(--borders);
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   transition: background-color 0.2s ease-out, transform 0.15s ease;
 }
 .link-button:hover {
@@ -649,7 +654,7 @@ dialog.windowlike {
   margin-top: 1rem;
   width: 12rem;
   height: 12rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   border: var(--borders);
 }
 .switch-container {
