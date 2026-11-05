@@ -399,7 +399,7 @@ select {
   border: var(--borders);
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease-out, transform 0.15s ease;
+  transition: background-color 0.2s ease-out;
 }
 select:not(:disabled):hover {
   background-color: var(--hover-color);
@@ -520,25 +520,25 @@ dialog {
   box-shadow: var(--shadows-2);
 }
 dialog[open] {
-  animation: dialog-open 0.2s ease forwards;
+  animation: dialog-open 0.2s ease-out forwards;
 }
 dialog::backdrop {
-  background-color: #0000;
-  transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete, background-color 0.2s ease;
+  background-color: transparent;
+  transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete, background-color 0.2s ease-out;
 }
 dialog[open]::backdrop {
   background-color: #00000066;
 }
 @starting-style {
   dialog[open]::backdrop {
-    background-color: #0000;
+    background-color: transparent;
   }
 }
 dialog.closing::backdrop {
-  background-color: #0000;
+  background-color: transparent;
 }
 dialog.closing {
-  animation: dialog-close 0.2s ease forwards;
+  animation: dialog-close 0.2s ease-in forwards;
 }
 dialog.windowlike {
   width: 48rem;
@@ -593,7 +593,7 @@ dialog.windowlike {
   border: var(--borders);
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.2s ease-out, transform 0.15s ease;
+  transition: background-color 0.2s ease-out;
 }
 .link-button:hover {
   background-color: var(--hover-color);
@@ -607,18 +607,6 @@ dialog.windowlike {
 }
 .link-button.back-btn {
   border: none;
-}
-.download-button {
-  background-color: #00cc00;
-  color: #1a1a1a;
-}
-.download-button:hover {
-  background-color: #00e600;
-  color: #1a1a1a;
-}
-.download-button:active {
-  background-color: #00b300;
-  color: #1a1a1a;
 }
 .linklike {
   color: var(--link-color);
@@ -643,20 +631,6 @@ dialog.windowlike {
   font-size: 2rem;
   border-bottom: none;
   text-align: center;
-}
-#splash-text {
-  display: block;
-  text-align: center;
-  animation: splash-fade-in 0.5s;
-  color: var(--text-color);
-}
-.mc-pack-icon {
-  image-rendering: pixelated;
-  margin-top: 1rem;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 8px;
-  border: var(--borders);
 }
 .switch-container {
   margin: 1rem 0;
