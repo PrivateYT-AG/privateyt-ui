@@ -194,10 +194,4 @@ const savedTheme = localStorage.getItem('theme') || 'system';
 applyTheme(savedTheme);
 updateActive();
 
-// Custom context menu
-
-const contextMenuTrigger = document.getElementById('custom-context-menu-trigger');
-
-contextMenuTrigger.addEventListener('contextmenu', (e) => {
-  e.preventDefault();
-});
+// Custom context menu (coming soon)
