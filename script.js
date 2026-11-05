@@ -18,7 +18,7 @@ dialog.forEach(dialog => {
       setTimeout(() => {
         dialog.close();
         dialog.classList.remove('closing');
-      }, 200)
+      }, 200);
     }
   });
   dialog.addEventListener('cancel', (e) => {
@@ -28,15 +28,17 @@ dialog.forEach(dialog => {
       dialog.close();
       dialog.classList.remove('closing');
     }, 200)
-  })
+  });
 });
 
 showModal.forEach(btn => {
   btn.addEventListener('click', () => {
     const id = btn.dataset.dialog;
     const dialog = document.getElementById(id);
-    if (dialog) {dialog.showModal()}
-  })
+    if (dialog) {
+      dialog.showModal();
+    }
+  });
 });
 
 closeModal.forEach(btn => {
@@ -47,9 +49,9 @@ closeModal.forEach(btn => {
       setTimeout(() => {
         dialog.close();
         dialog.classList.remove('closing');
-      }, 200)
+      }, 200);
     }
-  })
+  });
 });
 
 // Todo: Accessibility (none here for now)
@@ -61,7 +63,7 @@ document.querySelectorAll('.dropdown-menu button, .dropdown-menu .link-button').
 dropdownBtns.forEach(btn => {
   const menu = btn.nextElementSibling;
   const items = menu.querySelectorAll('button, .link-button');
-  btn.addEventListener('click', function () {
+  btn.addEventListener('click', () => {
     const isOpen = menu.classList.contains('show');
 
     closeAll();
@@ -120,7 +122,7 @@ function closeAll(restoreFocus = false) {
     if (wasOpen && restoreFocus) {
       btn.focus();
     }
-  })
+  });
 }
 
 // theme switching (needs improvement, to be honest)
@@ -144,7 +146,7 @@ function applyTheme(theme) {
   }
   else if (theme === 'system') {
     if (mediaQuery.matches) {
-      document.body.classList.add('dark-mode')
+      document.body.classList.add('dark-mode');
     }
   }
 }
