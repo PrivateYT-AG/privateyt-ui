@@ -27,7 +27,7 @@ dialog.forEach(dialog => {
     setTimeout(() => {
       dialog.close();
       dialog.classList.remove('closing');
-    }, 200)
+    }, 200);
   });
 });
 
